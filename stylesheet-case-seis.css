@@ -59,11 +59,15 @@ strong {
     text-align: left;
 }
 
-.resultado-final {
+#resultado-final {
     border: 1px solid black;
     padding: 10px;
     background-color: rgb(255, 234, 232);
     margin: 5px auto;
     width: 25%;
+}
+
+.oculto{
+    display: none;
 }
 

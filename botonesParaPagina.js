@@ -25,6 +25,7 @@ $agregarSalariosFamiliares.onclick = function () {
 }
 
 $calcularEdadSalarios.onclick = function () {
+    document.querySelector('#resultado-final').classList = "";
     if (comprobarInputsEdadVacios($cantidadDeFamiliares.value)) {
         resultadoFinalEdad($cantidadDeFamiliares.value);
         resultadoFinalSalario();
