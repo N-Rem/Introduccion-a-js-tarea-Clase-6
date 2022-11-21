@@ -4,7 +4,6 @@ const $calcularEdadSalarios = document.querySelector("#calcular");
 const $empezarDeNuevo = document.querySelector("#empezar-de-nuevo");
 const $cantidadDeFamiliares = document.querySelector("#cantidad-de-familia");
 const cantidadSalarios = document.querySelectorAll(".salario").length;
-const $botonReset = document.querySelector("#reset");
 $agregarFamiliares.onclick = function () {
     for (let i = 1; i <= $cantidadDeFamiliares.value; i++) {
         agregarFamiliar(i);
@@ -57,8 +56,4 @@ function resultadoFinalSalario() {
 
 $empezarDeNuevo.onclick = function () {
     location.reload();
-}
-$botonReset.onclick = function () {
-    $agregarFamiliares.disabled = false;
-    $agregarSalariosFamiliares.disabled = false;
 }
