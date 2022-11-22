@@ -13,8 +13,9 @@ $agregarFamiliares.onclick = function () {
     for (let i = 1; i <= $cantidadDeFamiliares.value; i++) {
         agregarFamiliar(i);
     }
-    $calcularEdadSalarios.classList = ("boton")
+    $calcularEdadSalarios.classList = ("boton");
     document.querySelector("#resultado-final").classList = "oculto";
+    $agregarSalariosFamiliares.disabled = false;
 }
 
 $agregarSalariosFamiliares.onclick = function () {
