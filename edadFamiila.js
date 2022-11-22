@@ -31,6 +31,7 @@ function agregarInputNombre(numeroDeFamiliar) {
     $label.appendChild($labelNombre);
     $contenedorFamiliar.appendChild($label);
     $inputNombre.setAttribute("id", `nombre-${numeroDeFamiliar}`);
+    $inputNombre.setAttribute("class", "nombre-familiar");
     $inputNombre.setAttribute("placeholder", "nombre del familiar");
     $contenedorFamiliar.appendChild($inputNombre);
     const $saltoDeLinea = document.createElement("br");
@@ -47,6 +48,7 @@ function agregarInputEdad(numeroDeFamiliar) {
     $inputEdad.setAttribute("id", `edad-${numeroDeFamiliar}`);
     $inputEdad.setAttribute("type", `number`);
     $inputEdad.setAttribute("placeholder", `edad del familiar`);
+    $inputEdad.setAttribute("class", "edad-familiar");
     $contenedorFamiliar.appendChild($inputEdad);
     const $saltoDeLinea = document.createElement("br");
     $contenedorFamiliar.appendChild($saltoDeLinea);
@@ -64,6 +66,7 @@ function agregarInputSiTrabaja(numeroDeFamiliar) {
     $inputSiTrabaja.setAttribute("type", "radio");
     $inputSiTrabaja.setAttribute("name", `trabaja-${numeroDeFamiliar}`);
     $inputSiTrabaja.setAttribute("id", `si-trabaja-${numeroDeFamiliar}`);
+    $inputSiTrabaja.setAttribute("class", "trabajo");
     $inputSiTrabaja.setAttribute("value", `si-trabaja-${numeroDeFamiliar}`);
 
     const $labelNoTrabaja = document.createElement("label");
@@ -74,6 +77,7 @@ function agregarInputSiTrabaja(numeroDeFamiliar) {
     $inputNoTrabaja.setAttribute("type", "radio");
     $inputNoTrabaja.setAttribute("name", `trabaja-${numeroDeFamiliar}`);
     $inputNoTrabaja.setAttribute("id", `no-trabaja-${numeroDeFamiliar}`);
+    $inputNoTrabaja.setAttribute("class", "trabajo");
     $inputNoTrabaja.setAttribute("value", `no-trabaja-${numeroDeFamiliar}`);
 
     $contenedorFamiliar.appendChild($labelNoTrabaja);
