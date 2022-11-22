@@ -69,6 +69,7 @@ function borrarIntegrantesAnteriores() {
     for (let i = 0; i < cantidadDeDivFamilares.length; i++) {
         // document.querySelectorAll(`.div-familiar`)[i].remove();
         cantidadDeDivFamilares[i].remove(); //¿¿¿¿que puntos paso??? 
+        cantidadDeDivFamilares[i].remove();
     }
 }
 
