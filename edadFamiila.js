@@ -1,20 +1,26 @@
 function agregarFamiliar(numeroDeFamiliar) {
-    agregarSubtituloConDiv(numeroDeFamiliar);
+    agregarDiv(numeroDeFamiliar);
+    agregarSubtitulo(numeroDeFamiliar)
     agregarInputNombre(numeroDeFamiliar);
     agregarInputEdad(numeroDeFamiliar);
     agregarInputSiTrabaja(numeroDeFamiliar);
 }
 
-function agregarSubtituloConDiv(numeroDeFamiliar) {
+function agregarDiv(numeroDeFamiliar) {
     const $formulario = document.querySelector("#formulario");
-    const $elementoTitulo = document.createElement("h3");
-    const $textoElementoTitulo = document.createTextNode(`Familiar numero ${numeroDeFamiliar}`);
     const $contenedorFamiliar = document.createElement("div");
     $contenedorFamiliar.classList = `familiar-${numeroDeFamiliar}`;
+    $contenedorFamiliar.classList.add('div-familiar');
     $formulario.appendChild($contenedorFamiliar);
+}
+function agregarSubtitulo (numeroDeFamiliar){
+    const $contenedorFamiliar = document.querySelector(`.familiar-${numeroDeFamiliar}`);
+    const $elementoTitulo = document.createElement("h3");
+    const $textoElementoTitulo = document.createTextNode(`Familiar numero ${numeroDeFamiliar}`);
     $elementoTitulo.classList = "subtitulo-familiar";
     $elementoTitulo.appendChild($textoElementoTitulo);
     $contenedorFamiliar.appendChild($elementoTitulo);
+    
 }
 function agregarInputNombre(numeroDeFamiliar) {
     const $label = document.createElement("label");

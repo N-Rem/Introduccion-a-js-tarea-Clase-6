@@ -5,10 +5,16 @@ const $empezarDeNuevo = document.querySelector("#empezar-de-nuevo");
 const $cantidadDeFamiliares = document.querySelector("#cantidad-de-familia");
 const cantidadSalarios = document.querySelectorAll(".salario").length;
 $agregarFamiliares.onclick = function () {
+    const cantidadDeDivFamilares = document.querySelectorAll(".div-familiar").length;
+    if (cantidadDeDivFamilares > 0) {
+        borrarIntegrantesAnteriores();
+    }
+
     for (let i = 1; i <= $cantidadDeFamiliares.value; i++) {
         agregarFamiliar(i);
     }
-    $agregarFamiliares.disabled = true;
+    $calcularEdadSalarios.classList = ("boton")
+    document.querySelector("#resultado-final").classList = "oculto";
 }
 
 $agregarSalariosFamiliares.onclick = function () {
@@ -24,10 +30,10 @@ $agregarSalariosFamiliares.onclick = function () {
 }
 
 $calcularEdadSalarios.onclick = function () {
-    document.querySelector('#resultado-final').classList = "";
     if (comprobarInputsEdadVacios($cantidadDeFamiliares.value)) {
         resultadoFinalEdad($cantidadDeFamiliares.value);
         resultadoFinalSalario();
+        document.querySelector('#resultado-final').classList = "";
     }
     else {
         alert("partes del formulario sin completar");
@@ -57,3 +63,13 @@ function resultadoFinalSalario() {
 $empezarDeNuevo.onclick = function () {
     location.reload();
 }
+
+function borrarIntegrantesAnteriores() {
+    const cantidadDeDivFamilares = document.querySelectorAll('.div-familiar');
+    for (let i = 0; i < cantidadDeDivFamilares.length; i++) {
+        // document.querySelectorAll(`.div-familiar`)[i].remove();
+        cantidadDeDivFamilares[i].remove(); //¿¿¿¿que puntos paso??? 
+    }
+}
+
+
